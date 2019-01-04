@@ -13,15 +13,10 @@ export default new Router({
       component: Home
     },
     {
-      path: '/thread',
-      component: Home,
-      name: 'Home'
-    },
-    {
       path: '/thread/:id',
       component: ThreadShow,
       name: 'ThreadShow',
-      props: {default: true}
+      props: true
     }
   ],
   mode: 'history'

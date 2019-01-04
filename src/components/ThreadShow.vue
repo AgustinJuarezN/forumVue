@@ -36,7 +36,8 @@ export default {
   },
   data () {
     return {
-      thread: sourceData.threads[this.$route.params.id],
+      thread: sourceData.threads['-KsjWehQ--apjDBwSBCY'],
+      threads: sourceData.threads,
       posts: sourceData.posts,
       users: sourceData.users
     }

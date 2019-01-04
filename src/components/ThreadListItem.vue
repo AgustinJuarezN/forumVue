@@ -1,8 +1,8 @@
 <template>
   <div class="thread">
     <div>
-      <p v-if="thread.key != null">
-         <router-link :to="{name: 'ThreadShow', params: {id: thread['.key']}}">
+      <p>
+         <router-link :to="{name: 'ThreadShow', params: {id: thread.forumId}}">
           {{thread.title}}
         </router-link>
       </p>
