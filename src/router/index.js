@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/thread',
       component: Home,
-      name: 'Home'
+      name: 'Hello'
     },
     {
       path: '/thread/:id',
