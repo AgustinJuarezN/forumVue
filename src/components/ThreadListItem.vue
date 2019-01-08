@@ -2,7 +2,7 @@
   <div class="thread">
     <div>
       <p>
-         <router-link :to="/threads/+thread['.key']">
+        <router-link :to="{name: 'PageThreadShow', params: {id: thread['.key']}}">
           {{thread.title}}
         </router-link>
       </p>
@@ -37,6 +37,7 @@
         type: Object
       }
     },
+
     computed: {
       repliesCount () {
         return Object.keys(this.thread.posts).length - 1

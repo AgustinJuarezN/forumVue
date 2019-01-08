@@ -1,8 +1,8 @@
 {
-  "name": "firststeps",
+  "name": "vueschool-forum",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Agustin <ajuarez@activo.uy>",
+  "description": "Awesome full blown mega madness forum",
+  "author": "Alex Kyriakidis <hootlex@icloud.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

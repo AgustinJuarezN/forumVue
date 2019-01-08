@@ -1,4 +1,6 @@
-# Forum
+# vueschool-forum
+
+> Awesome full blown mega madness forum
 
 ## Build Setup
 

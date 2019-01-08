@@ -6,15 +6,15 @@
 </template>
 
 <script>
-
 import sourceData from '@/data'
-import ThreadList from './ThreadList'
+import ThreadList from '@/components/ThreadList'
+console.log(sourceData)
 
 export default {
-  name: 'Home',
   components: {
     ThreadList
   },
+
   data () {
     return {
       threads: Object.values(sourceData.threads),
@@ -24,8 +24,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
