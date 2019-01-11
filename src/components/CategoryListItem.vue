@@ -1,27 +1,23 @@
 <template>
-  <div class="forum-listing">
-    <div class="forum-details">
-      <router-link
-        class="text-xlarge"
-        :to="{name: 'Category', params: {id: category['.key']}}"
-      >
-        {{category.name}}
+  <div class="forum-list">
+
+    <h2 class="list-title">
+      <router-link :to="{name: 'Category', params: {id: category['.key']}}">
+        {{ category.name }}
       </router-link>
-    </div>
+    </h2>
 
-    <div class="threads-count">
-      <p class="count"></p>
-      
-    </div>
-
-    <div class="last-thread">
-      <!-- TODO: implement later -->
-    </div>
+    <ForumList :forums="categoryForums"/>
   </div>
 </template>
 
 <script>
+    import ForumList from './ForumList'
+    import sourceData from '@/data'
     export default {
+      components: {
+        ForumList
+      },
       props: {
         category: {
           required: true,
@@ -29,11 +25,13 @@
         }
       },
       computed: {
-        // threadsCount () {
-        //   return this.categories.threads
-        //     ? Object.values(this.forum.threads).length
-        //     : 0
-        // }
+        categoryForums () {
+          return Object.values(sourceData.forums)
+            .filter(forum => forum.categoryId === this.category['.key'])
+        }
       }
     }
 </script>
+
+<style scoped>
+</style>
